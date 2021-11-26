@@ -92,6 +92,10 @@ const link = document.getElementById("link");
 
 walterHeading.addEventListener("click", function (event) {
   event.currentTarget.classList.add("blue");
+  //     console.log(event);
+  // using this
+  console.log(this);
+  // in arrow function it wont work
 });
 
 eventObjBtn.addEventListener("click", function (event) {
