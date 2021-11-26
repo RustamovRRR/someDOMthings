@@ -76,3 +76,28 @@ nameInput.addEventListener("keyup", function () {
   //   console.dir(nameInput);
   console.log(nameInput.value);
 });
+
+// event object
+
+// event object argument e, evt
+// info about triggered event
+// event.type
+// event.currentTarget
+// this keyword
+// preventDefault() - prevent default behaviours
+
+const walterHeading = document.querySelector(".walter");
+const eventObjBtn = document.querySelector(".btn-event");
+const link = document.getElementById("link");
+
+walterHeading.addEventListener("click", function (event) {
+  event.currentTarget.classList.add("blue");
+});
+
+eventObjBtn.addEventListener("click", function (event) {
+  console.log(event.type);
+});
+
+link.addEventListener("click", function (event) {
+  event.preventDefault();
+});
