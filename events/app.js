@@ -53,3 +53,26 @@ heading2.addEventListener("mouseenter", function () {
 heading2.addEventListener("mouseleave", function () {
   heading2.classList.remove("blue");
 });
+
+// keypress
+// keydown
+// keyup
+
+const nameInput = document.getElementById("name");
+
+// addeventlistner
+// keypress
+// nameInput.addEventListener("keypress", function () {
+//   console.log("keypress");
+// });
+
+// keydown
+// nameInput.addEventListener("keydown", function () {
+//   console.log("keydown");
+// });
+
+// keyup
+nameInput.addEventListener("keyup", function () {
+  //   console.dir(nameInput);
+  console.log(nameInput.value);
+});
