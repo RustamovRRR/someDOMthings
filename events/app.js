@@ -16,3 +16,40 @@ btn.addEventListener("click", function () {
   }
 });
 // abouve with used addEventListener with click event
+
+// working with mouse events
+// mousedown
+// mouseup
+// mouseenter
+// mouseleave
+
+const heading2 = document.querySelector("h2");
+const btnMouse = document.querySelector(".btn-mouse");
+
+btnMouse.addEventListener("click", function () {
+  console.log("click");
+});
+
+btnMouse.addEventListener("mousedown", function () {
+  console.log("mousedown");
+});
+
+btnMouse.addEventListener("mouseup", function () {
+  console.log("mouseup");
+});
+
+btnMouse.addEventListener("mouseenter", function () {
+  console.log("mouseenter");
+});
+
+btnMouse.addEventListener("mouseleave", function () {
+  console.log("mouseleave");
+});
+
+heading2.addEventListener("mouseenter", function () {
+  heading2.classList.add("blue");
+});
+
+heading2.addEventListener("mouseleave", function () {
+  heading2.classList.remove("blue");
+});
