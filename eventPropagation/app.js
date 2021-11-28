@@ -20,5 +20,28 @@ function stopPropagation(e) {
 
 container.addEventListener("click", stopPropagation, { capture: true });
 list.addEventListener("click", showBubbling, { capture: true });
-document.addEventListener("click", showBubbling, { capture: true });
-window.addEventListener("click", showBubbling, { capture: true });
+// document.addEventListener("click", showBubbling, { capture: true });
+// window.addEventListener("click", showBubbling, { capture: true });
+
+const container2 = document.querySelector(".container2");
+const btn = document.querySelector(".btn");
+// const heading = document.querySelector(".heading");
+
+function sayHello() {
+  console.log("hello");
+}
+
+// heading.addEventListener("click", sayHello);
+
+btn.addEventListener("click", function () {
+  const element = document.createElement("h1");
+  element.classList.add("heading");
+  element.textContent = `I am sitting inside container`;
+  container2.appendChild(element);
+});
+
+container2.addEventListener("click", function (e) {
+  if (e.target.classList.contains("heading")) {
+    console.log("there is container");
+  }
+});
