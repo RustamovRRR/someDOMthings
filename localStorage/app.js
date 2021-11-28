@@ -22,3 +22,24 @@ document.body.textContent = job;
 
 // removing item from localStorage
 localStorage.removeItem("name");
+
+// JSON.stringify(), JSON.parse()
+
+const friend = ["eva", "scarlett", "amanda"];
+
+localStorage.setItem("friends", JSON.stringify(friend));
+
+const values = JSON.parse(localStorage.getItem("friends"));
+console.log(values[1]);
+
+let fruits;
+
+if (localStorage.getItem("fruits")) {
+  fruits = JSON.parse(localStorage.getItem("fruits"));
+} else {
+  fruits = [];
+}
+//console.log(fruits);
+// fruits.push("apple");
+fruits.push("cherry");
+localStorage.setItem("fruits", JSON.stringify(fruits));
